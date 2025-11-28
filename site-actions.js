@@ -85,6 +85,7 @@
                 cart.push({ product, price, qty: 1, addedAt: new Date().toISOString() });
             }
             localStorage.setItem('stylehub_cart', JSON.stringify(cart));
+            refreshCartBadges();
             alert('Added to cart: ' + product);
         });
         el.style.cursor = 'pointer';
@@ -134,10 +135,10 @@
         if (!cart || cart.length === 0) {
             itemsEl.innerHTML = `<div class="py-12 text-center text-gray-500 dark:text-gray-400">Your bag is empty. <a href=\"new_arrivals.html\" class=\"text-primary hover:underline\">Start shopping</a>.</div>`;
             if (countEl) countEl.innerText = '0';
-            if (subtotalEl) subtotalEl.innerText = '$0.00';
-            if (shippingEl) shippingEl.innerText = '$0.00';
-            if (taxesEl) taxesEl.innerText = '$0.00';
-            if (totalEl) totalEl.innerText = '$0.00';
+            if (subtotalEl) subtotalEl.innerText = '₹0.00';
+            if (shippingEl) shippingEl.innerText = '₹0.00';
+            if (taxesEl) taxesEl.innerText = '₹0.00';
+            if (totalEl) totalEl.innerText = '₹0.00';
             refreshCartBadges();
             return;
         }
@@ -155,7 +156,7 @@
                     <div class="flex flex-1 flex-col justify-center gap-1">
                         <p class="text-gray-900 dark:text-white text-base font-semibold leading-normal">${escapeHtml(item.product)}</p>
                         <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Quantity: <span class=\"font-medium\">${qty}</span></p>
-                        <p class="text-gray-900 dark:text-white text-base font-medium leading-normal mt-1">$${price.toFixed(2)}</p>
+                        <p class="text-gray-900 dark:text-white text-base font-medium leading-normal mt-1">₹${price.toFixed(2)}</p>
                     </div>
                 </div>
                 <div class="flex flex-col items-end gap-4 shrink-0">
@@ -175,10 +176,10 @@
         const taxes = subtotal * 0.08; // 8% taxes
         const total = subtotal + shipping + taxes;
         if (countEl) countEl.innerText = String(cart.reduce((acc, i) => acc + (i.qty || 1), 0));
-        if (subtotalEl) subtotalEl.innerText = `$${subtotal.toFixed(2)}`;
-        if (shippingEl) shippingEl.innerText = `$${shipping.toFixed(2)}`;
-        if (taxesEl) taxesEl.innerText = `$${taxes.toFixed(2)}`;
-        if (totalEl) totalEl.innerText = `$${total.toFixed(2)}`;
+        if (subtotalEl) subtotalEl.innerText = `₹${subtotal.toFixed(2)}`;
+        if (shippingEl) shippingEl.innerText = `₹${shipping.toFixed(2)}`;
+        if (taxesEl) taxesEl.innerText = `₹${taxes.toFixed(2)}`;
+        if (totalEl) totalEl.innerText = `₹${total.toFixed(2)}`;
         refreshCartBadges();
 
         // Hook up qty controls and remove buttons
