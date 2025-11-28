@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Moda Uomo - FAQs</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b6cee",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Accordion state classes */
+        .accordion-item[open] .accordion-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark antialiased">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <div class="flex flex-1 justify-center">
+                <div class="layout-content-container flex w-full flex-col max-w-4xl flex-1">
+
+                    <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200/10 dark:border-slate-800/50 px-6 py-4 mb-10">
+                        <div class="flex items-center gap-4 text-slate-900 dark:text-white">
+                            <h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Moda Uomo - FAQs</h2>
+                        </div>
+                        <a href="home.html" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white hover:bg-primary/90 text-sm font-bold leading-normal tracking-[0.015em]">
+                            <span class="truncate">Back to Home</span>
+                        </a>
+                    </header>
+                    
+                    <main class="flex flex-col flex-1 px-4 md:px-6 py-4">
+                        <div class="flex flex-col gap-2 mb-8">
+                            <h1 class="text-slate-900 dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] text-center">Frequently Asked Questions</h1>
+                            <p class="text-slate-500 dark:text-slate-400 text-lg font-normal leading-normal text-center">Everything you need to know about our products, shipping, and returns.</p>
+                        </div>
+
+                        <div class="flex flex-col gap-4">
+                            <details class="accordion-item rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800/50 overflow-hidden">
+                                <summary class="flex cursor-pointer list-none items-center justify-between p-5 text-slate-900 dark:text-white text-lg font-semibold hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+                                    How long does shipping take?
+                                    <span class="material-symbols-outlined accordion-icon text-xl text-primary transition-transform duration-300">expand_more</span>
+                                </summary>
+                                <div class="p-5 pt-0 border-t border-slate-200 dark:border-slate-700">
+                                    <p class="text-slate-600 dark:text-slate-300 text-base font-normal leading-relaxed">
+                                        Standard shipping typically takes **5-7 business days** within the country. Express shipping options are available at checkout and usually take **2-3 business days**.
+                                    </p>
+                                </div>
+                            </details>
+
+                            <details class="accordion-item rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800/50 overflow-hidden">
+                                <summary class="flex cursor-pointer list-none items-center justify-between p-5 text-slate-900 dark:text-white text-lg font-semibold hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+                                    What is your return policy?
+                                    <span class="material-symbols-outlined accordion-icon text-xl text-primary transition-transform duration-300">expand_more</span>
+                                </summary>
+                                <div class="p-5 pt-0 border-t border-slate-200 dark:border-slate-700">
+                                    <p class="text-slate-600 dark:text-slate-300 text-base font-normal leading-relaxed">
+                                        We accept returns for unworn and unwashed items within **30 days** of delivery. The item must be in its original packaging with all tags attached. Please visit our dedicated Returns page for detailed instructions.
+                                    </p>
+                                </div>
+                            </details>
+
+                            <details class="accordion-item rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800/50 overflow-hidden">
+                                <summary class="flex cursor-pointer list-none items-center justify-between p-5 text-slate-900 dark:text-white text-lg font-semibold hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+                                    How do I find my size?
+                                    <span class="material-symbols-outlined accordion-icon text-xl text-primary transition-transform duration-300">expand_more</span>
+                                </summary>
+                                <div class="p-5 pt-0 border-t border-slate-200 dark:border-slate-700">
+                                    <p class="text-slate-600 dark:text-slate-300 text-base font-normal leading-relaxed">
+                                        A comprehensive **Size Guide** is linked on every product page. We recommend measuring yourself and comparing it to our charts, as sizing can vary slightly between brands and styles.
+                                    </p>
+                                </div>
+                            </details>
+
+                            <details class="accordion-item rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800/50 overflow-hidden">
+                                <summary class="flex cursor-pointer list-none items-center justify-between p-5 text-slate-900 dark:text-white text-lg font-semibold hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+                                    Can I cancel or modify my order after placing it?
+                                    <span class="material-symbols-outlined accordion-icon text-xl text-primary transition-transform duration-300">expand_more</span>
+                                </summary>
+                                <div class="p-5 pt-0 border-t border-slate-200 dark:border-slate-700">
+                                    <p class="text-slate-600 dark:text-slate-300 text-base font-normal leading-relaxed">
+                                        We process orders very quickly. You may be able to **cancel your order within 1 hour** of placement by contacting our support team. Unfortunately, we cannot modify orders once they are placed.
+                                    </p>
+                                </div>
+                            </details>
+                            
+                            <details class="accordion-item rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800/50 overflow-hidden">
+                                <summary class="flex cursor-pointer list-none items-center justify-between p-5 text-slate-900 dark:text-white text-lg font-semibold hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+                                    What payment methods do you accept?
+                                    <span class="material-symbols-outlined accordion-icon text-xl text-primary transition-transform duration-300">expand_more</span>
+                                </summary>
+                                <div class="p-5 pt-0 border-t border-slate-200 dark:border-slate-700">
+                                    <p class="text-slate-600 dark:text-slate-300 text-base font-normal leading-relaxed">
+                                        We accept all major credit cards (Visa, Mastercard, Amex), PayPal, and Google Pay. All transactions are secure and encrypted.
+                                    </p>
+                                </div>
+                            </details>
+
+                        </div>
+                    </main>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Chatbot widget (added by assistant) -->
+<div id="chat-widget" class="fixed bottom-6 right-6 z-50 text-sm">
+    <div id="chat-panel" role="dialog" aria-label="Chat with Stylehub Assistant" aria-hidden="true" class="hidden w-80 max-w-xs bg-white dark:bg-slate-800 rounded-xl shadow-lg flex flex-col overflow-hidden">
+        <div class="p-3 bg-primary text-white flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="currentColor"></path><path d="M2 17l10 5 10-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <strong>Stylehub Assistant</strong>
+            </div>
+            <button id="chat-close" class="text-white/80 hover:text-white rounded-md p-1" aria-label="Close chat">×</button>
+        </div>
+        <div id="chat-messages" class="p-3 h-56 overflow-y-auto space-y-3 bg-slate-50 dark:bg-slate-900"></div>
+        <form id="chat-form" class="p-3 flex gap-2 bg-slate-100 dark:bg-slate-900" autocomplete="off">
+            <input id="chat-input" class="flex-1 px-3 py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder:text-slate-400" placeholder="Ask me about shipping, returns, or orders..." />
+            <button id="chat-send" type="submit" class="px-3 py-2 rounded-lg bg-primary text-white">Send</button>
+        </form>
+    </div>
+    <button id="chat-toggle" class="w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center shadow-lg hover:bg-primary/90 focus:ring-2 focus:ring-primary focus:outline-none">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 11a4 4 0 114 4 4 4 0 01-4-4z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 12c0 4 4 8 10 8s10-4 10-8-4-8-10-8-10 4-10 8z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+</div>
+<script src="site-actions.js"></script>
+<script src="chatbot.js"></script>
+</body>
+</html>

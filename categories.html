@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Style Hub - Product Category</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b6cee",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+        function logout() {
+            alert('You have been logged out.'); 
+            window.location.href = 'index.html'; 
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark antialiased">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <div class="flex flex-1 justify-center">
+                <div class="layout-content-container flex w-full flex-col max-w-6xl flex-1">
+
+                    <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200/10 dark:border-slate-800/50 px-6 py-4">
+                        <div class="flex items-center gap-4 text-slate-900 dark:text-white">
+                            <h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Style Hub</h2>
+                        </div>
+                        <div class="flex flex-1 justify-end gap-8">
+                            <nav class="hidden md:flex items-center gap-9">
+                                <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal transition-colors" href="new_arrivals.html">New Arrivals</a>
+                                <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal transition-colors" href="clothing.html">Clothing</a>
+                                <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal transition-colors" href="accessories.html">Accessories</a>
+                                <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal transition-colors" href="#">Shoes</a>
+                                <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal transition-colors" href="#">Sale</a>
+                            </nav>
+                            <div class="flex items-center gap-2">
+                                <button data-action="logout" data-href="index.html" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-slate-600/10 dark:bg-slate-500/10 text-slate-900 dark:text-white hover:bg-slate-600/20 dark:hover:bg-slate-500/20 text-sm font-bold leading-normal tracking-[0.015em]">
+                                    <span class="truncate">Logout</span>
+                                </button>
+                                <button data-href="Cart Page.html" class="relative flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5 hover:bg-slate-200 dark:hover:bg-slate-700">
+                                    <span class="material-symbols-outlined text-xl">shopping_cart</span>
+                                    <div data-cart-badge class="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-primary text-white text-xs font-bold" style="display:none;">0</div>
+                                </button>
+                            </div>
+                        </div>
+                    </header>
+                    
+                    <main class="flex flex-col flex-1 px-4 md:px-6 py-8">
+                        
+                        <div class="mb-8">
+                            <h1 id="page-title" class="text-slate-900 dark:text-white text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em] mb-2">
+                                New Arrivals
+                            </h1>
+                            <p id="page-description" class="text-slate-500 dark:text-slate-400 text-base">
+                                Discover the latest styles and collections, just in time for your next look.
+                            </p>
+                        </div>
+
+                        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                            
+                            <aside class="lg:col-span-1">
+                                <div class="bg-white dark:bg-slate-800/50 p-6 rounded-xl border border-slate-200 dark:border-slate-700">
+                                    <h3 class="text-slate-900 dark:text-white text-xl font-bold mb-4">Filters</h3>
+                                    
+                                    <div class="mb-6">
+                                        <p class="text-slate-900 dark:text-white font-medium mb-2">Refine By</p>
+                                        <div class="flex flex-col space-y-1 text-slate-600 dark:text-slate-300">
+                                            <label class="flex items-center gap-2 text-sm cursor-pointer hover:text-primary transition-colors">
+                                                <input type="checkbox" class="form-checkbox rounded text-primary border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 focus:ring-primary/50"> Formal
+                                            </label>
+                                            <label class="flex items-center gap-2 text-sm cursor-pointer hover:text-primary transition-colors">
+                                                <input type="checkbox" class="form-checkbox rounded text-primary border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 focus:ring-primary/50"> Casual
+                                            </label>
+                                            <label class="flex items-center gap-2 text-sm cursor-pointer hover:text-primary transition-colors">
+                                                <input type="checkbox" class="form-checkbox rounded text-primary border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 focus:ring-primary/50"> Seasonal
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-6">
+                                        <p class="text-slate-900 dark:text-white font-medium mb-2">Price Range</p>
+                                        <input type="range" min="500" max="15000" value="7500" class="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer range-lg">
+                                        <div class="flex justify-between text-xs text-slate-500 dark:text-slate-400 mt-1">
+                                            <span>Min</span>
+                                            <span>Max</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-all">
+                                        Apply Filters
+                                    </button>
+                                </div>
+                            </aside>
+
+                            <section class="lg:col-span-3">
+                                <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
+                                    
+                                    <a href="#" class="flex flex-col gap-2 group">
+                                        <div class="aspect-square bg-slate-200 dark:bg-slate-700 rounded-xl overflow-hidden relative">
+                                            <div class="flex items-center justify-center h-full text-slate-500 dark:text-slate-400 text-sm font-medium">
+                                            <a href="\style hub\shirt.jpeg">Mens shirt</a>
+                                            </div>
+                                            <button data-action="quick-view" data-product="Mens Shirt" class="absolute bottom-3 left-1/2 -translate-x-1/2 translate-y-16 group-hover:translate-y-0 transition-all duration-300 flex items-center justify-center h-8 px-3 rounded-full bg-black/70 text-white text-xs font-bold">
+                                                Quick View
+                                            </button>
+                                        </div>
+                                        <h4 class="text-slate-900 dark:text-white text-base font-semibold truncate hover:text-primary transition-colors">Product Name Example</h4>
+                                        <p class="text-primary text-lg font-bold">₹3,200</p>
+                                    </a>
+                                    
+                                    <a href="#" class="flex flex-col gap-2 group">
+                                        <div class="aspect-square bg-slate-200 dark:bg-slate-700 rounded-xl overflow-hidden relative">
+                                            <div class="flex items-center justify-center h-full text-slate-500 dark:text-slate-400 text-sm font-medium">[Product 2 Image]</div>
+                                            <button data-action="quick-view" data-product="Product 2" class="absolute bottom-3 left-1/2 -translate-x-1/2 translate-y-16 group-hover:translate-y-0 transition-all duration-300 flex items-center justify-center h-8 px-3 rounded-full bg-black/70 text-white text-xs font-bold">Quick View</button>
+                                        </div>
+                                        <h4 class="text-slate-900 dark:text-white text-base font-semibold truncate hover:text-primary transition-colors">Another Item Title</h4>
+                                        <p class="text-primary text-lg font-bold">₹1,999</p>
+                                    </a>
+                                    
+                                    <a href="#" class="flex flex-col gap-2 group">
+                                        <div class="aspect-square bg-slate-200 dark:bg-slate-700 rounded-xl overflow-hidden relative">
+                                            <div class="flex items-center justify-center h-full text-slate-500 dark:text-slate-400 text-sm font-medium">Leather shoe</div>
+                                            <button data-action="quick-view" data-product="Leather Shoe" class="absolute bottom-3 left-1/2 -translate-x-1/2 translate-y-16 group-hover:translate-y-0 transition-all duration-300 flex items-center justify-center h-8 px-3 rounded-full bg-black/70 text-white text-xs font-bold">Quick View</button>
+                                        </div>
+                                        <h4 class="text-slate-900 dark:text-white text-base font-semibold truncate hover:text-primary transition-colors">jean</h4>
+                                        <p class="text-primary text-lg font-bold">₹5,500</p>
+                                    </a>
+                                    
+                                </div>
+                            </section>
+                            
+                        </div>
+                    </main>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Chatbot widget (added by assistant) -->
+<div id="chat-widget" class="fixed bottom-6 right-6 z-50 text-sm">
+    <div id="chat-panel" role="dialog" aria-label="Chat with Stylehub Assistant" aria-hidden="true" class="hidden w-80 max-w-xs bg-white dark:bg-slate-800 rounded-xl shadow-lg flex flex-col overflow-hidden">
+        <div class="p-3 bg-primary text-white flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="currentColor"></path><path d="M2 17l10 5 10-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <strong>Stylehub Assistant</strong>
+            </div>
+            <button id="chat-close" class="text-white/80 hover:text-white rounded-md p-1" aria-label="Close chat">×</button>
+        </div>
+        <div id="chat-messages" class="p-3 h-56 overflow-y-auto space-y-3 bg-slate-50 dark:bg-slate-900"></div>
+        <form id="chat-form" class="p-3 flex gap-2 bg-slate-100 dark:bg-slate-900" autocomplete="off">
+            <input id="chat-input" class="flex-1 px-3 py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder:text-slate-400" placeholder="Ask me about shipping, returns, or orders..." />
+            <button id="chat-send" type="submit" class="px-3 py-2 rounded-lg bg-primary text-white">Send</button>
+        </form>
+    </div>
+    <button id="chat-toggle" class="w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center shadow-lg hover:bg-primary/90 focus:ring-2 focus:ring-primary focus:outline-none">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 11a4 4 0 114 4 4 4 0 01-4-4z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 12c0 4 4 8 10 8s10-4 10-8-4-8-10-8-10 4-10 8z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+</div>
+<script src="site-actions.js"></script>
+<script src="chatbot.js"></script>
+</body>
+</html>

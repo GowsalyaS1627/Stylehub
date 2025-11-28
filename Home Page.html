@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Style Hub - Home Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#2b6cee",
+              "background-light": "#f6f6f8",
+              "background-dark": "#101622",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="flex flex-1 justify-center">
+<div class="layout-content-container flex w-full flex-col max-w-6xl flex-1">
+<!-- TopNavBar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200/10 dark:border-slate-800/50 px-6 py-4">
+<div class="flex items-center gap-4 text-slate-900 dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_6_319)"><path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z"></path></g><defs><clippath id="clip0_6_319"><rect fill="white" height="48" width="48"></rect></clippath></defs></svg>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Style Hub</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="hidden md:flex items-center gap-9">
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="Home Page.html">Home</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="Products Page.html">Products</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="Cart Page.html">Cart</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="Shipping Page.html">Shipping</a>
+</div>
+<div class="flex items-center gap-2">
+<button data-action="logout" data-href="index.html" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-slate-600/10 dark:bg-slate-500/10 text-slate-900 dark:text-white hover:bg-slate-600/20 dark:hover:bg-slate-500/20 text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Logout</span>
+</button>
+<button data-href="Cart Page.html" class="relative flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5 hover:bg-slate-200 dark:hover:bg-slate-700">
+<span class="material-symbols-outlined text-xl">shopping_cart</span>
+<div data-cart-badge class="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-primary text-white text-xs font-bold">0</div>
+</button>
+</div>
+</div>
+</header>
+<main class="flex flex-col flex-1">
+<!-- HeroSection -->
+<div class="w-full @container py-10 px-4 md:px-6">
+<div class="flex min-h-[480px] md:min-h-[560px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center p-4" data-alt="Stylish man wearing a modern jacket and sunglasses, standing in a minimalist urban environment." style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDYfWomsTZANswgl5eGCcefbTpjRhGmbiudyxADIjtTvQzMN51I24k9X5j4bkPqEyyxcQxfmDakn6FM6A_HHP6cyTwOO60cY-NiYJRpDRwIFmaY52HiVhhGyoBOwvsCUhpYj8BLGhmXBfBtsnmtcx4IKz71PGH7Zur1yQH06hKFPZU-55HFgr-P6idI_YEnkdd5uGn_g76o78efZYP4Imsf6nIiYEdQzgryYvctEF1ud0YlyqKiClBscydII-NbgePdHg0KV9ZLcWMA");'>
+<div class="flex flex-col gap-4 text-center items-center">
+<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-6xl max-w-2xl">
+                                        Define Your Style
+                                    </h1>
+<h2 class="text-slate-200 text-base font-normal leading-normal @[480px]:text-lg max-w-xl">
+                                        Explore the latest trends and timeless classics in men's fashion. Your new look awaits.
+                                    </h2>
+</div>
+<button data-href="new_arrivals.html" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90">
+<span class="truncate">Shop New Arrivals</span>
+</button>
+</div>
+</div>
+<!-- SectionHeader -->
+<div class="px-4 md:px-6">
+<h2 class="text-slate-900 dark:text-white text-2xl font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-8">Shop by Category</h2>
+</div>
+<!-- ImageGrid -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 p-4 md:p-6">
+<div class="relative group bg-cover bg-center flex flex-col gap-3 rounded-xl justify-end p-4 aspect-[3/4] overflow-hidden" data-alt="A collection of well-folded featured t-shirts in various colors on a clean background." style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 60%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAT0MRLDr1ZGrZscS78Lhe1pbZosz5EmAOWxYsKA21bZAhqY1i0oEOD6txMB-cCPSi_OiOsSyqjZqSASJuYI3v9k2Zr4OJIV0km03Kwz1lypAbIcI3ZRETA_W5RNbr-VZtZu5qUCYq3gTasO1SrMLUUNvMHS0HzgL2fgkFrGFV2MwHIOC9S-jA1mQmKeOfeu1vUt2J7D48l2Z72BU6VAS0jr9YlFUXch-RB5nAkbdYjhe1xF8SnrLkLDCXrgoS63knT0T-kmHAclKyK");'>
+<p class="text-white text-base font-bold leading-tight z-10">Featured T-Shirts</p>
+<button data-href="Products Page.html" class="absolute bottom-4 right-4 z-10 flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-white/20 backdrop-blur-sm text-white text-sm font-bold leading-normal tracking-[0.015em] translate-y-16 group-hover:translate-y-0 transition-transform duration-300 ease-in-out">Shop Now</button>
+</div>
+<div class="relative group bg-cover bg-center flex flex-col gap-3 rounded-xl justify-end p-4 aspect-[3/4] overflow-hidden" data-alt="Crisp, ironed formal shirts hanging neatly in a wardrobe." style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 60%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDXxuqMkxbSpjPm8t6mUMbv9mv1iNol5tmbN0cZ8N3_6oD-Gh8BfXwRsG1Bf5Sk72jxUoHh_UJtWmpV3k6Mocz0bX8tPNu7r0GfQDiedJdeVR5c6acu-Xi87BvnJ83TviHHOEGFGQB2T7DNEaXVI9UULACsQi4ZrGHlFlgg_obszsZbeJFKQwg_TYBeSW2ruVaQ7YJ31Ju8weSvrkOCShzcYYZFwSMhxhdaeUSEcGMAxY6FHK4ziTi3CpTD4dbz2QwsJL6Vs6ddr95N");'>
+<p class="text-white text-base font-bold leading-tight z-10">Formal Shirts</p>
+<button data-href="clothing.html" class="absolute bottom-4 right-4 z-10 flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-white/20 backdrop-blur-sm text-white text-sm font-bold leading-normal tracking-[0.015em] translate-y-16 group-hover:translate-y-0 transition-transform duration-300 ease-in-out">Shop Now</button>
+</div>
+<div class="relative group bg-cover bg-center flex flex-col gap-3 rounded-xl justify-end p-4 aspect-[3/4] overflow-hidden" data-alt="A stack of different styles and washes of denim jeans." style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 60%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuD3F3gWLs2GPE8SE96SUn2ozncuIHfsscRgnSHtFrfbk62Srs5SgtamWkThr5tSpwzHbvW75ys0kxpni4bND91aUkG6AS9mXfUcEYb7Xj9jufeiFWqAu5KZ82Vzb7MusCW1FYu_51zVxv3eL0Fdk5Kgh0BKwe7a7LXEL_FE4HT5dHMIMSuDDeNyArj2LMq2paLexkaY0XI-jnw295RQfQp9bvzITvQAgbN96QwwPfMj-5fPyLeBor5l0iuU3dkD9YUBE3QLDeCXzlnC");'>
+<p class="text-white text-base font-bold leading-tight z-10">Jeans</p>
+<button data-href="Products Page.html" class="absolute bottom-4 right-4 z-10 flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-white/20 backdrop-blur-sm text-white text-sm font-bold leading-normal tracking-[0.015em] translate-y-16 group-hover:translate-y-0 transition-transform duration-300 ease-in-out">Shop Now</button>
+</div>
+<div class="relative group bg-cover bg-center flex flex-col gap-3 rounded-xl justify-end p-4 aspect-[3/4] overflow-hidden" data-alt="A man wearing a traditional and stylish ethnic kurta." style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 60%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCFji4jU_q6o9MfWgTXRVyI3VIaKcr9HzoiGueH-jfF1i0UgU-YD6z1GpIQgY1Su1MED-iU_KArpgkqphIpTXKkBy4qi1NeO2PgMYwP0GbkeQUe3Z4MygDdZG5ok8ouUCqPOBw0HLgvKSvudEKLGyqLkT4Zbdjvae6wUH3F8y_yiqe1UQzvqq_LQdRXa0Ph2m6KSolR9f4Y3TWTO_WqpVYoOE8YaMDx_HpYb3PuhR1w8SUC7_b6WjQ8UuwYQ9S6sMCETRu_R7DiAdlX");'>
+<p class="text-white text-base font-bold leading-tight z-10">Ethnic Wear</p>
+<button data-href="clothing.html" class="absolute bottom-4 right-4 z-10 flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-white/20 backdrop-blur-sm text-white text-sm font-bold leading-normal tracking-[0.015em] translate-y-16 group-hover:translate-y-0 transition-transform duration-300 ease-in-out">Shop Now</button>
+</div>
+<div class="relative group bg-cover bg-center flex flex-col gap-3 rounded-xl justify-end p-4 aspect-[3/4] overflow-hidden" data-alt="A warm and fashionable men's jacket hanging on a hook." style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 60%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBVej94YnHhcc5GInULICCa5PF0zjjx45mQ2h9WrgaqFrDH4bmOfBLNLNb8tA3chxIRKIheDPGvLiA0EDUpSxpur0OmMb5vbFAMgVLqyxoVe-aGb4EvR4y2Yet4vhUynhL9Q5cyFDsFb-gI3qAZlZ-4dzeYyUFNaTz8hOdkcTwx8nGyUKT0gK2hvpTmUGuAkCmCKireCJyApNy78ZfrJEmRduDuMjHrs1kgTmZvq6A3puvxqBba_UgqLZO5fHWXUm6_boGZC-keCKbM");'>
+<p class="text-white text-base font-bold leading-tight z-10">Jackets</p>
+<button data-href="Products Page.html" class="absolute bottom-4 right-4 z-10 flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-white/20 backdrop-blur-sm text-white text-sm font-bold leading-normal tracking-[0.015em] translate-y-16 group-hover:translate-y-0 transition-transform duration-300 ease-in-out">Shop Now</button>
+</div>
+<div class="relative group bg-cover bg-center flex flex-col gap-3 rounded-xl justify-end p-4 aspect-[3/4] overflow-hidden" data-alt="A pair of stylish leather men's dress shoes." style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 60%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuChLFvMdKQ9XnXpXMDqXpZZMUw3_NNI3q0BRRywnnftuEm70rd9oCwTTPKWbjbBTmJXy7oCa_Ls0eU49JvyV0UKC4gdItST612hYOn4KUP3o1Lz57JBfv2kFZMDQTqnRLlnjgmNJmeXbXM5dFPC4oOe5eFPSJDgvjcgpKXdPxe6VTPKOCoYGZSrhfekhNpW0gs_eBBuXHIGQx2I3xejl-2_cQOApmxZBvjB96txVEg6HaN1iEsn5O3QrtxqahLHp4oJUlBNjFRAHJvV");'>
+<p class="text-white text-base font-bold leading-tight z-10">Shoes</p>
+<button class="absolute bottom-4 right-4 z-10 flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-white/20 backdrop-blur-sm text-white text-sm font-bold leading-normal tracking-[0.015em] translate-y-16 group-hover:translate-y-0 transition-transform duration-300 ease-in-out">Shop Now</button>
+</div>
+</div>
+<!-- CTASection -->
+<div class="w-full @container px-4 md:px-6 py-10">
+<div class="bg-slate-100 dark:bg-slate-800/50 rounded-xl">
+<div class="flex flex-col items-center justify-end gap-6 px-4 py-16 text-center @[480px]:gap-8 @[480px]:px-10 @[480px]:py-20">
+<div class="flex flex-col gap-2">
+<h1 class="text-slate-900 dark:text-white tracking-tight text-3xl font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-xl">
+                                            Join Our Newsletter
+                                        </h1>
+<p class="text-slate-600 dark:text-slate-300 text-base font-normal leading-normal max-w-xl">Get exclusive offers, style tips, and a first look at new arrivals delivered right to your inbox.</p>
+</div>
+<div class="flex flex-1 justify-center w-full max-w-md">
+<label class="flex flex-col w-full h-14 @[480px]:h-16">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<input id="newsletter-email" class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border-none bg-white dark:bg-background-dark focus:border-none h-full placeholder:text-slate-400 dark:placeholder:text-slate-500 px-4 rounded-r-none border-r-0 pr-2 text-sm font-normal leading-normal @[480px]:text-base" placeholder="Enter your email address" value=""/>
+<div class="flex items-center justify-center rounded-r-lg border-l-0 border-none bg-white dark:bg-background-dark pr-2">
+<button data-action="subscribe" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90">
+<span class="truncate">Subscribe</span>
+</button>
+</div>
+</div>
+</label>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-100 dark:bg-slate-800/50 text-slate-600 dark:text-slate-400 mt-10">
+<div class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white mb-4">Style Hub</h3>
+<p class="text-sm">Your destination for modern men's fashion. Curated styles for the discerning gentleman.</p>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white mb-4">Shop</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-primary dark:hover:text-primary" href="#">New Arrivals</a></li>
+<li><a class="hover:text-primary dark:hover:text-primary" href="#">Best Sellers</a></li>
+<li><a class="hover:text-primary dark:hover:text-primary" href="#">T-Shirts</a></li>
+<li><a class="hover:text-primary dark:hover:text-primary" href="#">Shoes</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white mb-4">Customer Service</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-primary dark:hover:text-primary" href="contact.html">Contact Us</a></li>
+<li><a class="hover:text-primary dark:hover:text-primary" href="Shipping Page.html">Shipping &amp; Returns</a></li>
+<li><a class="hover:text-primary dark:hover:text-primary" href="faqs.html">FAQs</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white mb-4">Follow Us</h3>
+<div class="flex space-x-4">
+<a class="hover:text-primary dark:hover:text-primary" data-alt="Facebook logo" href="#">
+<svg class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg>
+</a>
+<a class="hover:text-primary dark:hover:text-primary" data-alt="Twitter logo" href="#">
+<svg class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616v.064c0 2.298 1.634 4.212 3.793 4.649-.4.108-.82.165-1.25.165-.304 0-.598-.03-.886-.084.616 1.923 2.394 3.315 4.512 3.355-1.624 1.275-3.668 2.03-5.88 2.03-.382 0-.76-.022-1.13-.066 2.099 1.35 4.596 2.14 7.29 2.14 8.743 0 13.522-7.243 13.522-13.523 0-.206-.005-.411-.013-.615.928-.67 1.734-1.507 2.363-2.45z"></path></svg>
+</a>
+<a class="hover:text-primary dark:hover:text-primary" data-alt="Instagram logo" href="#">
+<svg class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.012 3.584-.07 4.85c-.148 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.012-3.584.07-4.85c.148-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.644-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+<div class="border-t border-slate-200/50 dark:border-slate-700/50 text-center py-4">
+<p class="text-sm text-slate-500 dark:text-slate-400">© 2024 Style Hub. All Rights Reserved.</p>
+</div>
+</footer>
+</div>
+</div>
+</div>
+</div>
+<!-- Chatbot widget (added by assistant) -->
+<div id="chat-widget" class="fixed bottom-6 right-6 z-50 text-sm">
+  <div id="chat-panel" role="dialog" aria-label="Chat with Stylehub Assistant" aria-hidden="true" class="hidden w-80 max-w-xs bg-white dark:bg-slate-800 rounded-xl shadow-lg flex flex-col overflow-hidden">
+    <div class="p-3 bg-primary text-white flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="currentColor"></path><path d="M2 17l10 5 10-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <strong>Stylehub Assistant</strong>
+      </div>
+      <button id="chat-close" class="text-white/80 hover:text-white rounded-md p-1" aria-label="Close chat">×</button>
+    </div>
+    <div id="chat-messages" class="p-3 h-56 overflow-y-auto space-y-3 bg-slate-50 dark:bg-slate-900"></div>
+    <form id="chat-form" class="p-3 flex gap-2 bg-slate-100 dark:bg-slate-900" autocomplete="off">
+      <input id="chat-input" class="flex-1 px-3 py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder:text-slate-400" placeholder="Ask me about shipping, returns, or orders..." />
+      <button id="chat-send" type="submit" class="px-3 py-2 rounded-lg bg-primary text-white">Send</button>
+    </form>
+  </div>
+  <button id="chat-toggle" class="w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center shadow-lg hover:bg-primary/90 focus:ring-2 focus:ring-primary focus:outline-none">
+    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 11a4 4 0 114 4 4 4 0 01-4-4z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 12c0 4 4 8 10 8s10-4 10-8-4-8-10-8-10 4-10 8z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+</div>
+<script src="site-actions.js"></script>
+<script src="chatbot.js"></script>
+</body></html>
